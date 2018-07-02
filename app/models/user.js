@@ -5,7 +5,8 @@
   
     username: {
 		type: String,
-		index:true
+		index:true,
+		unique:true
 	},
 	password: {
 		type: String

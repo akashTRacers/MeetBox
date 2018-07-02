@@ -30,9 +30,11 @@ module.exports = function(client){
             let message=data.message;
             console.log(name+"    "+message);
             //check for name and message
-            if(name=='' && message=='')
+            if(name == '' ||message=='')
             {
-                sendStatus("please enter name and message")
+                //send error status
+                sendStatus("please enter name and message");
+
             }
             else {
                 //Insert message
@@ -49,15 +51,6 @@ module.exports = function(client){
                 });
             }
         })
-        
-
-        
-   
-                
-         
-          
-
-
         socket.on('disconnect', function(){
             console.log('user disconnected');
           });

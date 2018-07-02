@@ -53,16 +53,6 @@ class UserController{
     console.log("insert Login Details controller*************");
     //console.log("&&&&&&&&&&&&&&&&&&&&&&&&",client);
     User.find({}, function(err, results){
-      
-      var arr1 = results;
-	let emailHolder = arr1.map((val, i, arr1) => {
-  return "http://127.0.0.1:9000/?email="+val.email;
-});
-for(let arr2 of emailHolder){
-  console.log(arr2);
-  }
-
-
       var players = results;
       const result = players.filter(player=> player.username!= req.user.username);
       //console.log(">>>>>>>>>>>>>>>>>>>",result);
